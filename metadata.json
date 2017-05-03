@@ -1,0 +1,33 @@
+{
+  "name": "jhooyberghs-kopano",
+  "version": "0.1.0",
+  "author": "Jeroen Hooyberghs <jeroen@hooyberghs.org>",
+  "summary": "This module will install and configure one or more of the Kopano server components",
+  "license": "Apache-2.0",
+  "source": "https://github.com/jhooyberghs/puppet-kopano.git",
+  "project_page": "",
+  "issues_url": "https://github.com/jhooyberghs/puppet-kopano/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
