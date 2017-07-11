@@ -1,3 +1,5 @@
+[![Build](https://travis-ci.org/jhooyberghs/puppet-kopano.svg?branch=master)](https://travis-ci.org/jhooyberghs/puppet-sslh)
+
 #### Table of Contents
 
 1. [Overview](#overview)
