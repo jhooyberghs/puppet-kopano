@@ -8,7 +8,7 @@ require 'puppet-syntax/tasks/puppet-syntax'
 require 'metadata-json-lint/rake_task'
 require 'rubocop/rake_task'
 
-if Puppet.version.to_f >= 4.9
+if Puppet.version.to_f <= 4.9
     require 'semantic_puppet'
 elsif Puppet.version.to_f >= 3.6 && Puppet.version.to_f < 4.9
     require 'puppet/vendor/semantic/lib/semantic'
