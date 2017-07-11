@@ -3,6 +3,7 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 group :test do
   gem "rake", '< 11.0'
   gem "puppet", ENV['PUPPET_GEM_VERSION'] || '>= 4.0'
+  gem "semantic_puppet"
   gem "rspec", '< 3.2.0'
   gem "rspec-puppet"
   gem "puppetlabs_spec_helper"

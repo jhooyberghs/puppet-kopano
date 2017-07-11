@@ -1,7 +1,7 @@
 ---
 sudo: false
 language: ruby
-bundler_args: --without development system_tests
+bundler_args: --without development system_tests --full-index
 before_install: rm Gemfile.lock || true
 rvm:
   - 1.9.3
