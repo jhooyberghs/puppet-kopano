@@ -124,7 +124,6 @@ class kopano::server (
   Enum['yes','no']                              $restrict_admin_permissions       = 'no',
   Integer                                       $embedded_attachment_limit        = 20,
   String                                        $proxy_header                     = '',
-  Enum['yes','no']                              $external_searchfolders           = 'yes',
 ) {
 
   package { $package_name:
