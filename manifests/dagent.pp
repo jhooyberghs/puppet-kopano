@@ -10,6 +10,7 @@ class kopano::dagent (
   Boolean                   $service_enable       = true,
   Enum['file','syslog']     $log_method           = 'file',
   Stdlib::Absolutepath      $log_file             = '/var/log/kopano/dagent.log',
+  Integer[0,6]              $log_level            = 3,
   Enum['0','1']             $log_timestamp        = '1',
   Enum['yes','no']          $log_raw_message      = 'no',
   Stdlib::Absolutepath      $log_raw_message_path = '/tmp',

@@ -29,7 +29,7 @@ class kopano::server (
   String                                        $tmp_path                         = '/tmp',
   Enum['file','syslog']                         $log_method                       = 'file',
   Stdlib::Absolutepath                          $log_file                         = '/var/log/kopano/server.log',
-  Integer                                       $log_level                        = 3,
+  Integer[0,6]                                  $log_level                        = 3,
   Integer[0,1]                                  $log_timestamp                    = 1,
   Integer                                       $log_buffer_size                  = 0,
   Enum['yes','no']                              $audit_log_enabled                = 'no',

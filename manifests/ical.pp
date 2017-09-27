@@ -16,6 +16,7 @@ class kopano::ical (
   Enum['thread','fork']     $process_model             = 'fork',
   String                    $log_method                = 'file',
   Stdlib::Absolutepath      $log_file                  = '/var/log/kopano/ical.log',
+  Integer[0,6]              $log_level                 = 3,
   Integer[0,1]              $log_timestamp             = 1,
   Stdlib::Absolutepath      $ssl_private_key_file      = '/etc/kopano/ical/privkey.pem',
   Stdlib::Absolutepath      $ssl_certificate_file      = '/etc/kopano/ical/cert.pem',
