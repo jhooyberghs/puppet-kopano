@@ -22,6 +22,7 @@ class kopano::ical (
   Enum['yes','no']          $ssl_verify_client         = 'no',
   String                    $ssl_verify_file           = '',
   String                    $ssl_verify_path           = '',
+  String                    $ssl_protocols             = '!SSLv2 !SSLv3',
   String                    $ssl_ciphers               = 'ALL:!LOW:!SSLv2:!EXP:!aNULL',
   Enum['yes','no']          $ssl_prefer_server_ciphers = 'no',
   String                    $server_timezone           = 'Europe/Amsterdam',
