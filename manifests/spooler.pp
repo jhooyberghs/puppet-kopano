@@ -14,6 +14,7 @@ class kopano::spooler (
   String                    $tmp_path                       = '/tmp',
   String                    $log_method                     = 'file',
   Stdlib::Absolutepath      $log_file                       = '/var/log/kopano/spooler.log',
+  Integer[0,6]              $log_level                      = 3,
   Integer[0,1]              $log_timestamp                  = 1,
   Integer                   $max_threads                    = 5,
   String                    $fax_domain                     = 'fax.local',

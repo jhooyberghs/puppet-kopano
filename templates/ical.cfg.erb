@@ -42,7 +42,7 @@ process_model = <%= @process_model %>
 log_method = <%= @log_method %>
 
 # Loglevel (0(none), 1(crit), 2(err), 3(warn), 4(notice), 5(info), 6(debug))
-#log_level = 3
+log_level = <%= @log_level %>
 
 # Logfile for log_method = file, use '-' for stderr
 log_file = <%= @log_file %>
@@ -71,7 +71,7 @@ ssl_verify_path = <%= @ssl_verify_path %>
 
 # SSL protocols to use, space-separated list of protocols
 # (SSLv3 TLSv1 TLSv1.1 TLSv1.2); prefix with ! to lock out a protocol.
-#ssl_protocols =
+ssl_protocols = <%= @ssl_protocols %>
 
 # SSL ciphers to use, set to 'ALL' for backward compatibility
 ssl_ciphers = <%= @ssl_ciphers %>

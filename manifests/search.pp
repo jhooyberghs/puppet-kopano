@@ -15,6 +15,7 @@ class kopano::search (
   Stdlib::Absolutepath      $ssl_certificate_file      = '/etc/kopano/search/cert.pem',
   Enum['syslog','file']     $log_method                = 'file',
   Stdlib::Absolutepath      $log_file                  = '/var/log/kopano/search.log',
+  Integer[0,6]              $log_level                 = 3,
   Integer[0,1]              $log_timestamp             = 1,
   String                    $term_cache_size           = '64M',
   Integer                   $index_processes           = 1,

@@ -33,12 +33,14 @@ class kopano::gateway (
   Enum['yes','no']          $ssl_verify_client         = 'no',
   String                    $ssl_verify_file           = '',
   String                    $ssl_verify_path           = '',
+  String                    $ssl_protocols             = '!SSLv2 !SSLv3',
   String                    $ssl_ciphers               = 'ALL:!LOW:!SSLv2:!EXP:!aNULL',
   Enum['yes','no']          $ssl_prefer_server_ciphers = 'no',
   String                    $process_model             = 'fork',
   Stdlib::Absolutepath      $tmp_path                  = '/tmp',
   Enum['file','syslog']     $log_method                = 'file',
   Stdlib::Absolutepath      $log_file                  = '/var/log/kopano/gateway.log',
+  Integer[0,6]              $log_level                 = 3,
   Integer[0,1]              $log_timestamp             = 1,
 ) {
   package { $package_name:

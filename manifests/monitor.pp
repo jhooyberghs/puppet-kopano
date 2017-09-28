@@ -11,6 +11,7 @@ class kopano::monitor (
   String                    $servers                       = '',
   Enum['file','syslog']     $log_method                    = 'file',
   Stdlib::Absolutepath      $log_file                      = '/var/log/kopano/monitor.log',
+  Integer[0,6]              $log_level                     = 3,
   Integer[0,1]              $log_timestamp                 = 1,
   Integer                   $quota_check_interval          = 15,
   Integer                   $mailquota_resend_interval     = 1,
