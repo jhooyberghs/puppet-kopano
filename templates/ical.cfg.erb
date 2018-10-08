@@ -11,29 +11,26 @@
 #pid_file = /var/run/kopano/ical.pid
 
 # run server in this path (when not using the -F switch)
-#running_path = /var/lib/kopano
+#running_path = /var/lib/kopano/empty
 
-# IP Address to bind to (empty for ANY)
-#server_bind =
-
-# wether normal connections can be made to the ical server
-ical_enable = <%= @ical_enable %>
-
-# port which the ical server listens on for normal connections
-ical_port = <%= @ical_port %>
-
-# wether ssl connections can be made to the ical server
-icals_enable = <%= @icals_enable %>
-
-# port which the ical server listens on for ssl connections
-icals_port = <%= @icals_port %>
+# Space-separated list of address:port specifiers for where the server should
+# listen for connections.
+#
+#    "*:8080" — port 8080, all protocols
+#    "[::]:8080" — port 8080 on IPv6 only
+#    "[2001:db8::1]:8080" — port 8080 on specific address only
+#
+# ical has often been placed on 8080 and icals on 8443.
+#
+ical_listen = *:8080
+#icals_listen =
 
 # default connection to the storage server
 # Please refer to the administrator manual or manpage why HTTP is used rather than the UNIX socket.
 server_socket = <%= @server_socket %>
 
 # Process model, using pthreads (thread) or processes (fork)
-process_model = <%= @process_model %>
+process_model = thread
 
 ##############################################################
 # ICAL LOG SETTINGS

@@ -1,19 +1,14 @@
 ##############################################################
 # SERVER SETTINGS
 
-# IP Address to bind to (empty for ANY)
-# Set to ::1 or 127.0.0.1 if connections should only come from localhost
-# and through the webserver proxy
-server_bind		= <%= @server_bind %>
-
-# Accept normal TCP connections (not recommended to disable)
-server_tcp_enabled	= <%= @server_tcp_enabled %>
-
-# Port to bind to
-server_tcp_port		= <%= @server_tcp_port %>
-
-# Accept Unix pipe connections (not recommended to disable)
-server_pipe_enabled	= <%= @server_pipe_enabled %>
+ listen for unencrypted connections.
+#
+#    "*:236" — port 236, all protocols
+#    "[::]:236" — port 236 on IPv6 only
+#    "[2a01:db1::1]:236" — port 236 on specific address only
+#    To disable unencrypted connections, set to an empty value.
+#
+server_listen = <%= @server_listen %>
 
 # Unix socket location
 server_pipe_name	= <%= @server_pipe_name %>
@@ -180,11 +175,10 @@ attachment_s3_bucketname = <%= @attachment_s3_bucketname %>
 ##############################################################
 #  SSL SETTINGS
 
-# enable SSL support in server
-server_ssl_enabled	= <%= @server_ssl_enabled %>
-
-# Listen for SSL connections on this port
-server_ssl_port		= <%= @server_ssl_port %>
+# Space-separated list of address:port specifiers for where to listen for
+# TLS-encrypted connections. The same syntax as the "server_listen" directive
+# applies.
+server_listen_tls = <%= @server_listen_tls %>
 
 # Required Server certificate, contains the certificate and the private key parts
 server_ssl_key_file	= <%= @server_ssl_key_file %>
@@ -402,20 +396,6 @@ storename_format = %f
 # default: %u
 loginname_format = %u
 
-# Set to yes for Windows clients to be able to download the latest
-# Kopano Outlook client from the storage server
-client_update_enabled = false
-
-# Place the correct Kopano Outlook Client in this directory for
-# Windows clients to download through the storage server
-client_update_path = /var/lib/kopano/client
-
-# Recieve update information from the client (0 = disabled, 1 = only on error, 2 = log always)
-client_update_log_level = 1
-
-# Log location for the client auto update files
-client_update_log_path = /var/log/kopano/autoupdate
-
 # Everyone is a special internal group, which contains every user and group
 # You may want to disable this group from the Global Addressbook by setting
 # this option to 'yes'. Administrators will still be able to see the group.
@@ -479,3 +459,6 @@ embedded_attachment_limit = 20
 # is taken to be received via a proxy. An empty value disables proxy detection
 # and the value of '*' is used to indicate that all connections are proxied
 proxy_header =
+
+# Enable/disable reminders for shared stores
+shared_reminders = yes
