@@ -95,7 +95,6 @@ class kopano::server (
   Stdlib::Absolutepath                          $createcompany_script             = '/etc/kopano/userscripts/createcompany',
   Stdlib::Absolutepath                          $deletecompany_script             = '/etc/kopano/userscripts/deletecompany',
   Enum['yes','no']                              $user_safe_mode                   = 'no',
-  Integer                                       $thread_stacksize                 = 512,
   Boolean                                       $enable_hosted_kopano             = false,
   Boolean                                       $enable_distributed_kopano        = false,
   String                                        $storename_format                 = '%f',
