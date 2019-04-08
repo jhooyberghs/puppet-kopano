@@ -88,7 +88,6 @@ class kopano::server (
   Integer                                       $companyquota_warn                = 0,
   Enum['ldap','unix','db','ldapms']             $user_plugin                      = 'db',
   Stdlib::Absolutepath                          $user_plugin_config               = '/etc/kopano/ldap.cfg',
-  Stdlib::Absolutepath                          $plugin_path                      = '/usr/lib64/kopano',
   Stdlib::Absolutepath                          $createuser_script                = '/etc/kopano/userscripts/createuser',
   Stdlib::Absolutepath                          $deleteuser_script                = '/etc/kopano/userscripts/deleteuser',
   Stdlib::Absolutepath                          $creategroup_script               = '/etc/kopano/userscripts/creategroup',
