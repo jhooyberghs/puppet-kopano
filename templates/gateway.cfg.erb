@@ -10,13 +10,14 @@
 #
 # imaps is normally on 993, pop3s on 995.
 #
-pop3_listen = *:110
-pop3s_listen =
-imap_listen = *:143
-imaps_listen =
+pop3_listen = <%= @pop3_listen %>
+pop3s_listen = <%= @pop3s_listen %>
+imap_listen = <%= @imap_listen %>
+imaps_listen = <%= @imaps_listen %>
 
+# Connection to the storage server.
 # Please refer to the administrator manual or manpage why HTTP is used rather than the UNIX socket.
-server_socket = http://localhost:236/
+server_socket = <%= @server_socket %>
 
 # Set this value to a name to show in the logon greeting to clients.
 # Leave empty to use DNS to find this name.
@@ -35,9 +36,9 @@ server_hostname_greeting = <%= @server_hostname_greeting %>
 #pid_file = /var/run/kopano/gateway.pid
 
 # run server in this path (when not using the -F switch)
-#running_path = /var/lib/kopano
+#running_path = /var/lib/kopano/empty
 
-# create memory coredumps upon crash in the running_path directory
+# create memory coredumps upon crash [no, systemdefault, yes]
 coredump_enabled = <%= @coredump_enabled %>
 
 # Only mail folder for IMAP or all subfolders (calendar, contacts, tasks, etc. too)
@@ -62,7 +63,7 @@ imap_max_fail_commands = <%= @imap_max_fail_commands %>
 # to reach imap_max_fail_commands and leaves the client in a
 # broken state. The clients include Apple Mail. If you experience
 # problems or uses Apple Mail set this option to yes
-imap_ignore_command_idle = no
+imap_ignore_command_idle = <%= @imap_ignore_command_idle %>
 
 # Disable all plaintext authentications unless SSL/TLS is used
 disable_plaintext_auth = <%= @disable_plaintext_auth %>
@@ -114,6 +115,7 @@ log_method = <%= @log_method %>
 log_level = <%= @log_level %>
 
 # Logfile for log_method = file, use '-' for stderr
+# Default: -
 log_file = <%= @log_file %>
 
 # Log timestamp - prefix each log line with timestamp in 'file' logging mode
@@ -123,4 +125,4 @@ log_timestamp = <%= @log_timestamp %>
 #log_buffer_size = 0
 
 # Bypass authentification when connecting as an administrator to the UNIX socket.
-# bypass_auth = no
+#bypass_auth = no

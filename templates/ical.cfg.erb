@@ -30,7 +30,7 @@ ical_listen = *:8080
 server_socket = <%= @server_socket %>
 
 # Process model, using pthreads (thread) or processes (fork)
-process_model = thread
+process_model = <%= @process_model %>
 
 ##############################################################
 # ICAL LOG SETTINGS

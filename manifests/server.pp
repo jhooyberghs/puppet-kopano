@@ -40,6 +40,7 @@ class kopano::server (
   String                                        $mysql_password                   = '',
   String                                        $mysql_socket                     = '',
   String                                        $mysql_database                   = 'kopano',
+  String                                        $mysql_engine                     = 'InnoDB',
   Enum['database','files','s3']                 $attachment_storage               = 'files',
   Enum['yes','no']                              $attachment_files_fsync           = 'yes',
   Stdlib::Absolutepath                          $attachment_path                  = '/var/lib/kopano/attachments',
@@ -120,6 +121,7 @@ class kopano::server (
   Enum['yes','no']                              $restrict_admin_permissions       = 'no',
   Integer                                       $embedded_attachment_limit        = 20,
   String                                        $proxy_header                     = '',
+  Enum['yes', 'no']                             $shared_reminders                 = 'yes',
 ) {
 
   package { $package_name:
