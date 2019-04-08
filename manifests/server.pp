@@ -19,7 +19,6 @@ class kopano::server (
   String                                        $run_as_user                      = 'root',
   String                                        $run_as_group                     = 'root',
   Stdlib::Absolutepath                          $pid_file                         = '/var/run/kopano/server.pid',
-  Stdlib::Absolutepath                          $running_path                     = '/var/lib/kopano',
   String                                        $allocator_library                = 'default',
   Enum['yes','no']                              $coredump_enabled                 = 'yes',
   Integer                                       $session_timeout                  = 300,
