@@ -63,7 +63,6 @@ class kopano::server (
   Integer                                       $threads                          = 8,
   Integer                                       $watchdog_frequency               = 1,
   Integer                                       $watchdog_max_age                 = 500,
-  Integer                                       $server_max_keep_alive_requests   = 100,
   Integer                                       $server_recv_timeout              = 5,
   Integer                                       $server_read_timeout              = 60,
   Integer                                       $server_send_timeout              = 60,
