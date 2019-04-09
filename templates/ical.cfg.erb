@@ -22,8 +22,8 @@
 #
 # ical has often been placed on 8080 and icals on 8443.
 #
-ical_listen = *:8080
-#icals_listen =
+ical_listen = <%= @ical_listen %>
+icals_listen = <%= @icals_listen %>
 
 # default connection to the storage server
 # Please refer to the administrator manual or manpage why HTTP is used rather than the UNIX socket.
