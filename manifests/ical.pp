@@ -1,6 +1,8 @@
 # Class kopano::ical
 #
 class kopano::ical (
+  String                    $ical_listen               = '*:8080',
+  String                    $icals_listen              = '',
   String                    $run_user                  = 'kopano',
   String                    $run_group                 = 'kopano',
   String                    $package_name              = 'kopano-ical',
